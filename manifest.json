@@ -1,0 +1,27 @@
+{
+    "name": "QRcode sanner",
+    "description": "scan QRcode from webpage",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["scripting","tabs","contextMenus"],
+    "host_permissions": [
+        "https://*/",
+        "https://*/"
+      ],
+      "background": {
+        "service_worker": "main.js",
+        "type": "module"
+      },
+      "content_security_policy": {
+        "extension_pages": "script-src 'self';worker-src 'self'; object-src 'self'"
+      },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+          "128":"images/qrcode_icon.png"
+        }
+    },
+    "icons": {
+      "128":"images/qrcode_icon.png"
+    }
+}
