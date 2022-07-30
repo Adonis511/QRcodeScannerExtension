@@ -1,0 +1,2 @@
+# QRcodeScannerExtension
+A chrome extension
